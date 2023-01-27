@@ -1,9 +1,75 @@
-<html>
- 
-<body>
-  <h1>Kaiser Jux</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
- 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Number Guesser</title>
+    </head>
+    <body>
+        <div class="game-container">
+            <header>
+                <h1>Number Guesser!</h1>
+            </header>
+            <div class="rounds">
+                <p class="round-label">Round <span id="round">1</span></p>
+                <p class="target-label">Target Number: <span id="target-number">?</span></p>
+            </div>
+            <div class="guessing-area">
+                <div class="computer-guessing-area">
+                    <div class="computer-guessing-area-header">
+                        <p class="guess-label">Computer</p>
+                        <p class="score-label">Score: <span id="computer-score">0</span></p>
+                    </div>
+                    <div class="computer-guess">
+                        <p id="computer-guessing">?</p>
+                        <p class="winning-text" id="computer-wins"></p>
+                    </div>
+                </div>
+                <div class="user-guessing-area">
+                    <div class="user-guessing-header">
+                        <p class="guess-label">You</p>
+                        <p class="score-label">Score: <span id="user-score">0</span></p>
+                    </div>
+                    <div class="user-guessing">
+                        <input type="number" id="user-guess" min=0 max=10 value=0>
+                        <label class="number-controls">
+                            <button class="number-control left" id="number-decrease">-</button>
+                            <button class="number-control right" id="number-increase">+</button>
+                        </label>
+                    </div>
+                    <div class="guess-button">
+                        <label>
+                            <button class="button" id="guess">Make a Guess</button>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="next-round-area">
+                <label>
+                    <button class="next-round" id="next-round">Next Round</button>
+                </label>
+            </div>
+        </div>
+        <footer>
+            <div class="container-footer">
+                <div class="instruction">
+                    <h3>Step 1</h3>
+                <p>Input a number <br>between 0 and 9.</p>
+                </div>
+                <div class="instruction">
+                    <h3>Step 2</h3>
+                    <p>Click "Make a Guess" to submit your guess and see who won the round.</p>
+                </div>
+                <div class="instruction">
+                    <h3>Step 3</h3>
+                    <p>Click "Next Round" to play again.</p>
+                </div>
+            </div>
+        </footer> 
+        <script src="./script.js"></script>
+        <script src="./game.js"></script>
+    </body>
 </html>
